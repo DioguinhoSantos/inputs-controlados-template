@@ -6,21 +6,23 @@ export const HeaderContainer = styled.header`
     background-color: #ffffff;
     border: 1px solid black;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 `
 
 export const Logo = styled.div`
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     font-weight: bold;
     font-size: 2rem;
     gap: 16px;
+    width: 40%;
 `
 
 export const NavBar = styled.nav`
     background-color: #f7b158;
-    width: 50%;
+    width: 100%;
+    font-weight: bold;
 
 `
 export const OptionsList = styled.ul`
@@ -28,6 +30,7 @@ export const OptionsList = styled.ul`
     list-style-type: none;
     justify-content: space-evenly;
     height: 100%;
+    width: 100%;
     align-items: center;
     
 `
