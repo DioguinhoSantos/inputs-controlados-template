@@ -1,18 +1,24 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {MainContainer, Form, Input} from './styles'
 
 function MainPage() {
 
-  const onChangeNome = (event) => {
-    console.log(event.target.value)
+  const [nome, setNome] = useState('');
+  const [idade, setIdade] = useState('');
+  const [email, setEmail] = useState('');
+
+
+  const onChangeNome = (e) => {
+    setNome(e.target.value)
+    console.log(nome)
   }
 
-  const onChangeIdade = (event) => {
-    console.log(event.target.value)
+  const onChangeIdade = (e) => {
+    setIdade(e.target.value)
   }
 
-  const onChangeEmail = (event) => {
-    console.log(event.target.value)
+  const onChangeEmail = (e) => {
+    setEmail(e.target.value)
   }
 
   return (
@@ -21,15 +27,15 @@ function MainPage() {
       <Form>
         <label>
           Nome:
-          <Input onChange={onChangeNome}/>
+          <Input value={nome} onChange={onChangeNome}/>
         </label>
         <label>
           Idade:
-          <Input onChange={onChangeIdade}/>
+          <Input value={idade} onChange={onChangeIdade}/>
         </label>
         <label>
           E-mail:
-          <Input onChange={onChangeEmail}/>
+          <Input value={email} onChange={onChangeEmail}/>
         </label>
       <button>Enviar dados</button>
       </Form>

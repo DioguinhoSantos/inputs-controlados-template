@@ -6,4 +6,6 @@ export const AllRightsReserved = styled.footer`
     align-items: center;
     justify-content: center;
     background-color: #a8bbc6;
+    border: 1px solid black;
+    font-weight: bold;
 `
