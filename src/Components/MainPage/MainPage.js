@@ -21,6 +21,21 @@ function MainPage() {
     setEmail(e.target.value)
   }
 
+  const gravaDados = () => {
+    
+    let dados = {
+      nomeGravado: {nome},
+      idadeGravada: {idade},
+      emailGravado: {email}
+    }
+
+    console.log(dados)
+    setNome('');
+    setEmail('');
+    setIdade('')
+    
+  }
+
   return (
     <MainContainer>
       <h2>Formulário de inscrição</h2>
@@ -37,7 +52,7 @@ function MainPage() {
           E-mail:
           <Input value={email} onChange={onChangeEmail}/>
         </label>
-      <button>Enviar dados</button>
+      <button onClick={gravaDados}>Enviar dados</button>
       </Form>
     </MainContainer>
   )
