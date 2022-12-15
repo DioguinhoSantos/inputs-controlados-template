@@ -7,7 +7,6 @@ function MainPage() {
   const [idade, setIdade] = useState('');
   const [email, setEmail] = useState('');
 
-
   const onChangeNome = (e) => {
     setNome(e.target.value)
     console.log(nome)
@@ -24,16 +23,16 @@ function MainPage() {
   const gravaDados = () => {
     
     let dados = {
-      nomeGravado: {nome},
-      idadeGravada: {idade},
-      emailGravado: {email}
+      nomeGravado: nome,
+      idadeGravada: idade,
+      emailGravado: email
     }
 
     console.log(dados)
     setNome('');
     setEmail('');
     setIdade('')
-    
+
   }
 
   return (
